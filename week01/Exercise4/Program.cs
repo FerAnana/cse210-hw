@@ -8,9 +8,9 @@ class Program
         List<int> numbers = new List<int>();
         int stopAdd = 0;
         int numToAdd;
-        int sum = 0;
+        double sum = 0;
         int largestNum = 0;
-        int avgNum;
+        double avgNum;
         do
         {
             Console.Write("Enter a number [Enter 0 to quit]: ");
@@ -29,7 +29,7 @@ class Program
             }
         }
         avgNum = sum / numbers.Count;
-        Console.WriteLine($"The sum is: {sum}.");
+        Console.WriteLine($"The sum is: {sum}");
         Console.WriteLine($"The average is: {avgNum}");
         Console.WriteLine($"The largest number is {largestNum}");
     }   
