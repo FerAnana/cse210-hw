@@ -32,7 +32,7 @@ public class Comment
       "I love chess!",
       "I don't like this type of content",
       "Messi is the GOAT!",
-      "I would do this recipe!",
+      "I will try this!",
       "I could sleep very well with this as background",
       "Haha, same",
       "Yooo, I'm going to subscribe",
@@ -43,13 +43,12 @@ public class Comment
     _name = names[randomName];
 
     int randomComment = _selector.Next(0, comments.Count());
-    _name = names[randomName];
     _comment = comments[randomComment];
   }
   
   public string GetComment()
   {
-    string fullComment = _name + ": " + _comment;
+    string fullComment = $"{_name}: {_comment}";
     return fullComment;
   }
 }
