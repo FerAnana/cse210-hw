@@ -46,17 +46,15 @@ public class Video
 
   public int numComents()
   {
-    return GetMoreComments().Count();
+    return _comments.Count();
   }
   public void DisplayVideoAndComments()
   {
-    Console.WriteLine(GetVideoDetails());
-    Console.WriteLine($"Total of comments: {numComents()}");
-    Console.WriteLine("");
+    Console.WriteLine($"{GetVideoDetails()}\n");
     foreach (string _comments in GetMoreComments())
     {
       Console.WriteLine(_comments);
     }
-    Console.WriteLine("");
+    Console.WriteLine($"\nTotal of comments: {numComents()}\n");
   }
 }
