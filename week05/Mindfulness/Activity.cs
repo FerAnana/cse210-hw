@@ -18,7 +18,7 @@ public class Activity
       Console.WriteLine("2. Reflection Activity");
       Console.WriteLine("3. Listing Activity");
       Console.WriteLine("4. Quit");
-      Console.Write("Please enter your choice: ");
+      Console.Write("Select a choice from the menu: ");
       return Console.ReadLine();
     }
 
@@ -27,7 +27,7 @@ public class Activity
     DisplayStartingMessage();
 
     Console.Clear();
-    Console.WriteLine("Get ready to begin...");
+    Console.WriteLine("Get ready...");
     ShowSpinner(3);
 
     RunActivity();
@@ -38,7 +38,7 @@ public class Activity
   protected void DisplayStartingMessage()
   {
     Console.Clear();
-    Console.WriteLine($"Welcome to the **{_name}**");
+    Console.WriteLine($"Welcome to the {_name}");
     Console.WriteLine();
     Console.WriteLine($"Description: {_description}");
     Console.WriteLine();

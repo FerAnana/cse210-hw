@@ -23,7 +23,6 @@ class Program
           activity = new ListingActivity();
           break;
         case "4":
-          Console.WriteLine("Thank you for using the Mindfulness Program. Goodbye!");
           break;
         default:
           Console.WriteLine("Invalid choice. Please enter 1, 2, 3, or 4.");

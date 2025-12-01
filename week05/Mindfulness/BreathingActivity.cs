@@ -17,7 +17,7 @@ public class BreathingActivity : Activity
       Console.WriteLine();
 
       if (DateTime.Now >= endTime) break;
-      Console.Write("Breathe out...");
+      Console.Write("Now breathe out...\n");
       ShowCountdown(5);
       Console.WriteLine();
     }
