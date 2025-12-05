@@ -22,7 +22,7 @@ public class GoalManager
       Console.WriteLine(" 4. Load Goals");
       Console.WriteLine(" 5. Record Event");
       Console.WriteLine(" 6. Quit");
-      Console.Write("Select a choice from the menu: ");
+      Console.Write("Select a choice from the menu: \n");
 
       string choice = Console.ReadLine();
 
@@ -37,15 +37,15 @@ public class GoalManager
   }
   public void DisplayPlayerInfo()
   {
-    Console.WriteLine($"You have {_score}");
+    Console.WriteLine($"You have {_score} points.");
   }
   public void ListGoalNames()
   {
-    Console.WriteLine("The goals are;");
+    Console.WriteLine("The goals are:");
     for (int i = 0; i < _goals.Count; i++)
     {
       string details = _goals[i].GetDetailsString();
-      Console.WriteLine($"{i + 1}. {_goals[1].GetDetailsString()}");
+      Console.WriteLine($"{i + 1}. {_goals[i].GetDetailsString()}");
     }
   }
   public void ListGoalDetails()
@@ -82,7 +82,7 @@ public class GoalManager
     }
     else if (type == "3")
     {
-      Console.Write("How many times does this goal need to be accomplished for a bonus?");
+      Console.Write("How many times does this goal need to be accomplished for a bonus? ");
       int target = int.Parse(Console.ReadLine());
       Console.Write("What is the bonus for accomplishing it that many times? ");
       int bonus = int.Parse(Console.ReadLine());
@@ -92,7 +92,7 @@ public class GoalManager
   public void RecordEvent()
   {
     ListGoalNames();
-    Console.Write("Which goal did you accomplish");
+    Console.Write("Which goal did you accomplish? ");
     int index = int.Parse(Console.ReadLine()) - 1;
 
     if (index >= 0 && index < _goals.Count)
