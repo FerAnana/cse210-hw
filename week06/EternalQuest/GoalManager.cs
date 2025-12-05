@@ -35,10 +35,12 @@ public class GoalManager
       else Console.WriteLine("Invalid choice.");
     }
   }
+
   public void DisplayPlayerInfo()
   {
     Console.WriteLine($"You have {_score} points.");
   }
+
   public void ListGoalNames()
   {
     Console.WriteLine("The goals are:");
@@ -48,6 +50,7 @@ public class GoalManager
       Console.WriteLine($"{i + 1}. {_goals[i].GetDetailsString()}");
     }
   }
+  
   public void ListGoalDetails()
   {
     Console.WriteLine("\nThe goals are:");
@@ -90,6 +93,7 @@ public class GoalManager
       _goals.Add(new ChecklistGoal(name, desc, points, target, bonus));
     }
   }
+
   public void RecordEvent()
   {
     ListGoalNames();
@@ -137,6 +141,7 @@ public class GoalManager
       }
     }
   }
+
   public void SaveGoals()
   {
     Console.Write("\nWhat is the filename for the gaol file? ");
@@ -151,6 +156,7 @@ public class GoalManager
       }
     }
   }
+  
   public void LoadGoals()
   {
     Console.Write("\nWhat is the filename for the goal file? ");
