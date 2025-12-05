@@ -37,7 +37,7 @@ public class GoalManager
   }
   public void DisplayPlayerInfo()
   {
-    Console.WriteLine($"You have {_score} points.");
+    Console.WriteLine($"You have {_score} points.\n");
   }
   public void ListGoalNames()
   {
@@ -50,12 +50,13 @@ public class GoalManager
   }
   public void ListGoalDetails()
   {
-    Console.WriteLine("The goals are:");
+    Console.WriteLine("\nThe goals are:");
     for (int i = 0; i < _goals.Count; i++)
     {
-      Console.WriteLine($"{i + 1}. {_goals[i].GetDetailsString()}");
+      Console.WriteLine($"{i + 1}. {_goals[i].GetDetailsString()}\n");
     }
   }
+
   public void CreateGoal()
   {
     Console.WriteLine("The types of Goals are:");
@@ -65,7 +66,7 @@ public class GoalManager
     Console.Write("Which type of goal would you like to create? ");
     string type = Console.ReadLine();
 
-    Console.Write("What is the name of your goal? ");
+    Console.Write("\nWhat is the name of your goal? ");
     string name = Console.ReadLine();
     Console.Write("What is a short description of it? ");
     string desc = Console.ReadLine();
@@ -82,7 +83,7 @@ public class GoalManager
     }
     else if (type == "3")
     {
-      Console.Write("How many times does this goal need to be accomplished for a bonus? ");
+      Console.Write("\nHow many times does this goal need to be accomplished for a bonus? ");
       int target = int.Parse(Console.ReadLine());
       Console.Write("What is the bonus for accomplishing it that many times? ");
       int bonus = int.Parse(Console.ReadLine());
@@ -138,7 +139,7 @@ public class GoalManager
   }
   public void SaveGoals()
   {
-    Console.Write("What is the filename for the gaol file? ");
+    Console.Write("\nWhat is the filename for the gaol file? ");
     string filename = Console.ReadLine();
 
     using (StreamWriter outputFile = new StreamWriter(filename))
@@ -152,7 +153,7 @@ public class GoalManager
   }
   public void LoadGoals()
   {
-    Console.Write("What is the filename for the goal file? ");
+    Console.Write("\nWhat is the filename for the goal file? ");
     string filename = Console.ReadLine();
 
     if (File.Exists(filename))
